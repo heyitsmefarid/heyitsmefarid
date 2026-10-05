@@ -46,8 +46,10 @@ const fred = {
 
 <table>
   <tr>
-    <td colspan="2" valign="top">
+    <td width="50%" valign="middle">
       <a href="https://iskonnect-scholar.web.app"><img src="assets/projects/iskonnect-logo.webp" alt="ISKONNECT logo" width="100%"></a>
+    </td>
+    <td width="50%" valign="middle">
       <h3>ISKONNECT <sub><sup>· capstone</sup></sub></h3>
       A mobile-based scholarship management system for applicants, scholars, requirements, academic records, attendance, announcements, and scholarship monitoring.
       <br><sub><b>Flutter · React.js · NestJS · PostgreSQL · Prisma</b></sub>
