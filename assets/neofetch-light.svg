@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+  <title id="title">fred@calapan — neofetch</title>
+  <desc id="desc">Role: Aspiring Full-Stack Developer. Course: BS Information Systems, 4th year. School: City College of Calapan. Location: Calapan City, Oriental Mindoro, Philippines. Stack: Flutter, React, Node.js, NestJS, PHP. Data: PostgreSQL, MySQL, Firebase, Supabase. Projects: 5, capstone ISKONNECT. Certifications: Java Programming NC III, Computer System Servicing NC II, Microsoft Cyber Security course. Status: open to internship or OJT.</desc>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
+    .ch { animation: show 0.01s steps(1) backwards; }
+    .in { animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+    .pop { animation: pop 0.45s cubic-bezier(0.22, 1, 0.36, 1) backwards; transform-box: fill-box; transform-origin: center; }
+    .cursor { animation: blink 1.1s steps(1) infinite; }
+    .pulse { animation: pulse 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .beat { animation: beat 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes show { from { fill-opacity: 0; } }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+    @keyframes pop { from { opacity: 0; transform: scale(0.2); } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.3); } }
+    @keyframes beat { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(0.7); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#000000" stroke-opacity="0.05"/>
+    </pattern>
+    <radialGradient id="glow" cx="80%" cy="35%" r="60%">
+      <stop offset="0" stop-color="#ffb000" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ffb000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="frame"><rect x="1" y="1" width="1198" height="468" rx="14"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="470" fill="#fbfaf7"/>
+    <rect width="1200" height="470" fill="url(#grid)"/>
+    <rect width="1200" height="470" fill="url(#glow)"/>
+    <rect width="1200" height="44" fill="#f3f1ec"/>
+    <path d="M0 44.5H1200" stroke="#e3ddd0"/>
+  </g>
+  <rect x="0.5" y="0.5" width="1199" height="469" rx="14" fill="none" stroke="#e3ddd0"/>
+  <circle cx="30" cy="22" r="6" fill="#e3ddd0"/>
+  <circle cx="50" cy="22" r="6" fill="#e3ddd0"/>
+  <circle cx="70" cy="22" r="6" fill="#ffb000"/>
+  <text x="600" y="27" text-anchor="middle" class="mono" font-size="14" fill="#6b6b6b">fred@calapan: ~</text>
+  <text x="1160" y="444" text-anchor="end" class="mono" font-size="16" fill="#6b6b6b"><tspan fill="#9a5a00">$</tspan> <tspan class="ch" style="animation-delay:0.20s">n</tspan><tspan class="ch" style="animation-delay:0.26s">e</tspan><tspan class="ch" style="animation-delay:0.32s">o</tspan><tspan class="ch" style="animation-delay:0.38s">f</tspan><tspan class="ch" style="animation-delay:0.44s">e</tspan><tspan class="ch" style="animation-delay:0.50s">t</tspan><tspan class="ch" style="animation-delay:0.56s">c</tspan><tspan class="ch" style="animation-delay:0.62s">h</tspan></text>
+  <rect x="72" y="104" width="30" height="30" rx="3" fill="#9a5a00" class="pop" style="animation-delay:0.900s"/>
+  <rect x="107" y="104" width="30" height="30" rx="3" fill="#9a5a00" class="pop" style="animation-delay:0.935s"/>
+  <rect x="142" y="104" width="30" height="30" rx="3" fill="#e39400" class="pop" style="animation-delay:0.970s"/>
+  <rect x="177" y="104" width="30" height="30" rx="3" fill="#9a5a00" class="pop" style="animation-delay:1.005s"/>
+  <rect x="212" y="104" width="30" height="30" rx="3" fill="#e39400" class="pop" style="animation-delay:1.040s"/>
+  <rect x="72" y="139" width="30" height="30" rx="3" fill="#9a5a00" class="pop" style="animation-delay:1.075s"/>
+  <rect x="72" y="174" width="30" height="30" rx="3" fill="#e39400" class="pop" style="animation-delay:1.110s"/>
+  <rect x="72" y="209" width="30" height="30" rx="3" fill="#9a5a00" class="pop" style="animation-delay:1.145s"/>
+  <rect x="107" y="209" width="30" height="30" rx="3" fill="#e39400" class="pop" style="animation-delay:1.180s"/>
+  <rect x="142" y="209" width="30" height="30" rx="3" fill="#9a5a00" class="pop" style="animation-delay:1.215s"/>
+  <rect x="177" y="209" width="30" height="30" rx="3" fill="#e39400" class="pop" style="animation-delay:1.250s"/>
+  <rect x="72" y="244" width="30" height="30" rx="3" fill="#e39400" class="pop" style="animation-delay:1.285s"/>
+  <rect x="72" y="279" width="30" height="30" rx="3" fill="#9a5a00" class="pop" style="animation-delay:1.320s"/>
+  <rect x="72" y="314" width="30" height="30" rx="3" fill="#e39400" class="pop" style="animation-delay:1.355s"/>
+  <rect x="253" y="314" width="30" height="30" rx="3" fill="#ffb000" class="pop" style="animation-delay:1.540s"/>
+  <text x="400" y="104" class="mono in" style="animation-delay:0.75s" font-size="24" font-weight="700" fill="#9a5a00">fred<tspan fill="#151515">@</tspan>calapan</text>
+  <text x="400" y="130" class="mono in" style="animation-delay:0.8s" font-size="18" fill="#e3ddd0">──────────────────────────</text>
+  <text x="400" y="166" class="mono in" style="animation-delay:0.85s" font-size="18"><tspan fill="#9a5a00" font-weight="700">Role</tspan><tspan x="520" fill="#151515">Aspiring Full-Stack Developer</tspan></text>
+  <text x="400" y="197" class="mono in" style="animation-delay:0.92s" font-size="18"><tspan fill="#9a5a00" font-weight="700">Course</tspan><tspan x="520" fill="#151515">BS Information Systems · 4th year</tspan></text>
+  <text x="400" y="228" class="mono in" style="animation-delay:0.99s" font-size="18"><tspan fill="#9a5a00" font-weight="700">School</tspan><tspan x="520" fill="#151515">City College of Calapan</tspan></text>
+  <text x="400" y="259" class="mono in" style="animation-delay:1.06s" font-size="18"><tspan fill="#9a5a00" font-weight="700">Location</tspan><tspan x="520" fill="#151515">Calapan City, Oriental Mindoro, PH</tspan></text>
+  <text x="400" y="290" class="mono in" style="animation-delay:1.13s" font-size="18"><tspan fill="#9a5a00" font-weight="700">Stack</tspan><tspan x="520" fill="#151515">Flutter · React · Node.js · NestJS · PHP</tspan></text>
+  <text x="400" y="321" class="mono in" style="animation-delay:1.20s" font-size="18"><tspan fill="#9a5a00" font-weight="700">Data</tspan><tspan x="520" fill="#151515">PostgreSQL · MySQL · Firebase · Supabase</tspan></text>
+  <text x="400" y="352" class="mono in" style="animation-delay:1.27s" font-size="18"><tspan fill="#9a5a00" font-weight="700">Projects</tspan><tspan x="520" fill="#151515">5 · capstone: ISKONNECT</tspan></text>
+  <text x="400" y="383" class="mono in" style="animation-delay:1.34s" font-size="18"><tspan fill="#9a5a00" font-weight="700">Certs</tspan><tspan x="520" fill="#151515">Java NC III · CSS NC II · MS Cyber Security</tspan></text>
+  <g class="in" style="animation-delay:1.41s"><text x="400" y="414" class="mono" font-size="18" font-weight="700" fill="#9a5a00">Status</text><circle cx="528" cy="408" r="6" fill="#ffb000" class="beat"/><text x="542" y="414" class="mono" font-size="18" fill="#151515">open to Internship / OJT</text></g>
+  <g class="in" style="animation-delay:1.56s"><rect x="400" y="440" width="34" height="20" rx="3" fill="#ebe8e1"/><rect x="440" y="440" width="34" height="20" rx="3" fill="#fde2a3"/><rect x="480" y="440" width="34" height="20" rx="3" fill="#f8c14f"/><rect x="520" y="440" width="34" height="20" rx="3" fill="#e39400"/><rect x="560" y="440" width="34" height="20" rx="3" fill="#9a5a00"/><rect x="600" y="440" width="34" height="20" rx="3" fill="#3a3a3a"/><rect x="640" y="440" width="34" height="20" rx="3" fill="#151515"/></g>
+</svg>

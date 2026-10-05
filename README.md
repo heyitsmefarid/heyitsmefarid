@@ -1,7 +1,9 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img alt="$ whoami — Fred Anthony Gallano, Aspiring Full-Stack Developer (web & mobile). BS Information Systems, City College of Calapan. Open to Internship / OJT." src="assets/header-light.svg" width="100%">
-</picture>
+<a href="https://fredanthonyyy.vercel.app">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+    <img alt="$ whoami — Fred Anthony Gallano, Aspiring Full-Stack Developer (web & mobile). BS Information Systems, City College of Calapan. Open to Internship / OJT." src="assets/header-light.svg" width="100%">
+  </picture>
+</a>
 
 <p align="center">
   <a href="https://fredanthonyyy.vercel.app"><img alt="Portfolio: fredanthonyyy.vercel.app" src="https://img.shields.io/badge/Portfolio-fredanthonyyy.vercel.app-ffb000?style=flat-square&labelColor=101010"></a>
@@ -9,94 +11,58 @@
   <img alt="Based in Calapan City, Philippines" src="https://img.shields.io/badge/Based_in-Calapan_City%2C_PH-ffb000?style=flat-square&labelColor=101010">
 </p>
 
-## Hi, I'm Fred 👋
+## `01` &nbsp;whoami
 
-I'm a 4th-year **BS Information Systems** student at **City College of Calapan** who enjoys turning ideas into working applications. I work across web, mobile, and backend development, and I learn best by building real projects — software that isn't just functional, but actually useful to the people who use it.
+Hi, I'm Fred 👋 — I enjoy turning ideas into working applications. I work across web, mobile, and backend development, and I learn best by building real projects: software that isn't just functional, but actually useful to the people who use it.
 
-```js
-const fred = {
-  studying:   "BS Information Systems @ City College of Calapan (4th year)",
-  building:   "ISKONNECT — a scholarship management system (capstone)",
-  lookingFor: "Internship / OJT in web, mobile, or full-stack development",
-  certified:  ["Java Programming NC III", "Computer System Servicing NC II", "Microsoft Cyber Security Course"],
-};
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/neofetch-dark.svg">
+  <img alt="neofetch-style card — Role: Aspiring Full-Stack Developer. Course: BS Information Systems, 4th year. School: City College of Calapan. Location: Calapan City, Oriental Mindoro, PH. Stack: Flutter, React, Node.js, NestJS, PHP. Data: PostgreSQL, MySQL, Firebase, Supabase. Projects: 5, capstone ISKONNECT. Certs: Java NC III, CSS NC II, Microsoft Cyber Security. Status: open to Internship / OJT." src="assets/neofetch-light.svg" width="100%">
+</picture>
 
-## Tech stack
+## `02` &nbsp;stack
 
-**Main development**<br>
+`~/stack/main`<br>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=flutter,react,nodejs,nestjs,php,ts,js,html,css,bootstrap&theme=dark">
   <img alt="Flutter, React, Node.js, NestJS, PHP, TypeScript, JavaScript, HTML, CSS, Bootstrap" src="https://skillicons.dev/icons?i=flutter,react,nodejs,nestjs,php,ts,js,html,css,bootstrap&theme=light">
 </picture>
 
-**Backend & data** &nbsp;·&nbsp; **Also code in**<br>
+`~/stack/data` &nbsp; `~/stack/also`<br>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres,mysql,firebase,supabase,python,java,cpp&theme=dark">
   <img alt="PostgreSQL, MySQL, Firebase, Supabase, Python, Java, C++" src="https://skillicons.dev/icons?i=postgres,mysql,firebase,supabase,python,java,cpp&theme=light">
 </picture>
 
-**Tools**<br>
+`~/stack/tools`<br>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=git,github,vscode,androidstudio,visualstudio,figma&theme=dark">
   <img alt="Git, GitHub, VS Code, Android Studio, Visual Studio, Figma" src="https://skillicons.dev/icons?i=git,github,vscode,androidstudio,visualstudio,figma&theme=light">
 </picture>
 
-## Featured projects
+## `03` &nbsp;projects
 
-<table>
-  <tr>
-    <td width="50%" valign="middle">
-      <a href="https://iskonnect-scholar.web.app"><img src="assets/projects/iskonnect-logo.webp" alt="ISKONNECT logo" width="100%"></a>
-    </td>
-    <td width="50%" valign="middle">
-      <h3>ISKONNECT <sub><sup>· capstone</sup></sub></h3>
-      A mobile-based scholarship management system for applicants, scholars, requirements, academic records, attendance, announcements, and scholarship monitoring.
-      <br><sub><b>Flutter · React.js · NestJS · PostgreSQL · Prisma</b></sub>
-      <br><a href="https://iskonnect-scholar.web.app">Live app ↗</a> &nbsp;·&nbsp; <sub>source is private</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://tailfinder-mu.vercel.app"><img src="assets/projects/tailfinder-landing.webp" alt="TailFinder home page" width="100%"></a>
-      <h3>TailFinder</h3>
-      A pet adoption system connecting adopters with available pets, with management tools for administrators.
-      <br><sub><b>PHP · CodeIgniter · MySQL</b></sub>
-      <br><a href="https://tailfinder-mu.vercel.app">Live demo ↗</a> &nbsp;·&nbsp; <a href="https://github.com/heyitsmefarid/tailfinder">Code</a>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://meugearup.vercel.app"><img src="assets/projects/meu-gear-up-home.webp" alt="MEU GearUp home page" width="100%"></a>
-      <h3>MEU Gear Up</h3>
-      A multi-branch motorcycle shop system with portals for customers, mechanics, suppliers, and admins — service booking, roadside assistance, POS, stock transfers, and sales reports.
-      <br><sub><b>PHP · MySQL · Bootstrap · Chart.js · PHPMailer</b></sub>
-      <br><a href="https://meugearup.vercel.app">Live demo ↗</a> &nbsp;·&nbsp; <a href="https://github.com/heyitsmefarid/meu_gearup">Code</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://checkers-theta-lemon.vercel.app"><img src="assets/projects/checkers-login.webp" alt="Checkers login screen" width="100%"></a>
-      <h3>Checkers Game</h3>
-      Checkers with player accounts, a two-player mode, and a computer opponent — on Hard it looks five moves ahead using minimax with alpha-beta pruning.
-      <br><sub><b>C# · .NET 8 WinForms · MySQL</b></sub>
-      <br><a href="https://checkers-theta-lemon.vercel.app">Play the web version ↗</a> &nbsp;·&nbsp; <a href="https://github.com/heyitsmefarid/checkers">Code</a>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://guhit-arts.vercel.app"><img src="assets/projects/guhit-arts-home.webp" alt="Guhit Arts Center home page" width="100%"></a>
-      <h3>Guhit Arts Center</h3>
-      A front-end prototype for an arts &amp; printing shop: preview your own text on a mug or shirt, shop with order tracking, and an admin panel with sales reports.
-      <br><sub><b>React · Vite · React Router</b></sub>
-      <br><a href="https://guhit-arts.vercel.app">Live demo ↗</a> &nbsp;·&nbsp; <a href="https://github.com/heyitsmefarid/guhit-arts">Code</a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://iskonnect-scholar.web.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/iskonnect-dark.svg"><img alt="01 · ISKONNECT (capstone): scholarship management for applicants, scholars, requirements, records, attendance and announcements. Flutter, React.js, NestJS, PostgreSQL, Prisma." src="assets/cards/iskonnect-light.svg" width="49%"></picture></a>
+  <a href="https://tailfinder-mu.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/tailfinder-dark.svg"><img alt="02 · TailFinder (web app): pet adoption system connecting adopters with available pets, plus admin tools. PHP, CodeIgniter, MySQL." src="assets/cards/tailfinder-light.svg" width="49%"></picture></a>
+  <a href="https://meugearup.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/meu-gear-up-dark.svg"><img alt="03 · MEU Gear Up (web app): multi-branch motorcycle shop with service booking, roadside assistance, POS, stock transfers and sales reports. PHP, MySQL, Bootstrap, Chart.js, PHPMailer." src="assets/cards/meu-gear-up-light.svg" width="49%"></picture></a>
+  <a href="https://checkers-theta-lemon.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/checkers-dark.svg"><img alt="04 · Checkers Game: accounts, two-player mode and an AI opponent that looks five moves ahead with minimax and alpha-beta pruning. C#, .NET 8 WinForms, MySQL." src="assets/cards/checkers-light.svg" width="49%"></picture></a>
+  <a href="https://guhit-arts.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/guhit-arts-dark.svg"><img alt="05 · Guhit Arts Center (prototype): arts and printing shop with a mug/shirt design preview, order tracking and admin sales reports. React, Vite, React Router." src="assets/cards/guhit-arts-light.svg" width="49%"></picture></a>
+  <a href="https://fredanthonyyy.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/more-dark.svg"><img alt="06 · More on my portfolio: fredanthonyyy.vercel.app" src="assets/cards/more-light.svg" width="49%"></picture></a>
+</p>
 
-## Contributions
+<p align="center"><sub>Click a card to open it live &nbsp;·&nbsp; source: <a href="https://github.com/heyitsmefarid/tailfinder">tailfinder</a> · <a href="https://github.com/heyitsmefarid/meu_gearup">meu_gearup</a> · <a href="https://github.com/heyitsmefarid/checkers">checkers</a> · <a href="https://github.com/heyitsmefarid/guhit-arts">guhit-arts</a> &nbsp;·&nbsp; ISKONNECT's source is private</sub></p>
+
+## `04` &nbsp;activity
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/heyitsmefarid/heyitsmefarid/output/snake-dark.svg">
-  <img alt="A snake eating Fred's GitHub contribution graph" src="https://raw.githubusercontent.com/heyitsmefarid/heyitsmefarid/output/snake-light.svg">
+  <img alt="A snake eating Fred's GitHub contribution graph" src="https://raw.githubusercontent.com/heyitsmefarid/heyitsmefarid/output/snake-light.svg" width="100%">
 </picture>
 
-## Let's connect
-
-Looking for an intern who learns by building? I'd love to hear from you — see more of my work and reach me through my **[portfolio ↗](https://fredanthonyyy.vercel.app)**.
+<a href="https://fredanthonyyy.vercel.app">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg">
+    <img alt="$ logout — Thanks for stopping by, connection to fred closed. fredanthonyyy.vercel.app — let's build something." src="assets/footer-light.svg" width="100%">
+  </picture>
+</a>
