@@ -133,47 +133,56 @@ function header(t, photo) {
   </g>`)
 }
 
-// Column positions of the projects table, shared by the head and the rows.
-const COL = { no: 18, shot: 70, name: 300, type: 760, tech: 935, end: 1198 }
-
-function tableHead(t) {
-  const W = 1200, H = 92
-  return svg(W, H, `Projects (${projects.length})`, `Table of ${projects.length} projects. Each row links to the project's page on the portfolio.`, `  ${style(t)}
-  <rect x="1" y="1" width="${W - 2}" height="${H}" fill="${t.paper}"/>
-  <path d="M1.5 ${H}V1.5H${W - 1.5}V${H}" fill="none" stroke="${t.ink}" stroke-width="3"/>
-  <rect x="1" y="1" width="${W - 2}" height="50" fill="${t.ink}"/>
-  <text x="18" y="34" class="sans" font-size="21" font-weight="800" fill="${t.onInk}">Projects (${projects.length})</text>
-  <text x="${W - 18}" y="34" text-anchor="end" class="sans" font-size="16" font-weight="600" fill="${t.onInk}">Click a row to open its page</text>
-  <text x="${COL.no}" y="78" class="mono" font-size="16" font-weight="700" fill="${t.soft}">No.</text>
-  <text x="${COL.shot}" y="78" class="sans" font-size="16" font-weight="600" fill="${t.soft}">Project</text>
-  <text x="${COL.type + 14}" y="78" class="sans" font-size="16" font-weight="600" fill="${t.soft}">Type</text>
-  <text x="${COL.tech + 14}" y="78" class="mono" font-size="16" font-weight="700" fill="${t.soft}">Built with</text>
-  <path d="M${COL.type} 51V${H}M${COL.tech} 51V${H}" stroke="${t.line}"/>
-  <path d="M1 ${H - 0.75}H${W - 1}" stroke="${t.ink}" stroke-width="1.5"/>`)
+// A wide title bar over the projects gallery.
+function galleryHead(t) {
+  const W = 1200, H = 56
+  return svg(W, H, `Projects (${projects.length})`, `${projects.length} projects. Each card links to the project's page on the portfolio.`, `  ${style(t)}
+  <rect x="1.5" y="1.5" width="${W - 3}" height="${H - 3}" fill="${t.ink}" stroke="${t.ink}" stroke-width="3"/>
+  <text x="20" y="36" class="sans" font-size="22" font-weight="800" fill="${t.onInk}">Projects (${projects.length})</text>
+  <text x="${W - 20}" y="36" text-anchor="end" class="sans" font-size="17" font-weight="600" fill="${t.onInk}">Click a card to open its page</text>`)
 }
 
-function row(t, p, i, shot, last) {
-  const W = 1200, H = 150
-  const pitch = wrap(p.pitch, 19, COL.type - COL.name - 24)
-  const tech = wrap(p.tech.join(', '), 17, COL.end - COL.tech - 30, true, ', ')
+const SHOT = { x: 16, y: 60, w: 568, h: 336 }
+
+// One project as a large card: a big screenshot, then what it is and what it's built with.
+function card(t, p, i, shot) {
+  const W = 600, H = 600
+  const no = String(i + 1).padStart(2, '0')
+  const pitch = wrap(p.pitch, 19, W - 40)
+  const tech = wrap(p.tech.join(', '), 16, W - 40, true, ', ')
   const badges = p.badges.filter((b) => !`${p.kind} ${p.tech.join(' ')}`.toLowerCase().includes(b.toLowerCase()))
-  const sub = badges.map((b) => (b.charAt(0) + b.slice(1).toLowerCase()).replace(/(^| )ai(?=-|$)/i, '$1AI'))
-  const nameSize = width(p.name, 27, true) > COL.type - COL.name - 30 ? 22 : 27
-  const live = p.liveUrl ? 'Live demo' : 'Not public'
-  return svg(W, H, `${String(i + 1).padStart(2, '0')} · ${p.name}`, `${p.name} (${p.kind}): ${p.pitch} Built with ${p.tech.join(', ')}.`, `  ${style(t)}
-  <rect x="1" y="0" width="${W - 2}" height="${H}" fill="${t.paper}"/>
-  <path d="M1.5 0V${H}M${W - 1.5} 0V${H}" stroke="${t.ink}" stroke-width="3"/>
-  ${last ? `<path d="M0 ${H - 1.5}H${W}" stroke="${t.ink}" stroke-width="3"/>` : `<path d="M1 ${H - 0.5}H${W - 1}" stroke="${t.line}"/>`}
-  <path d="M${COL.type} 0V${H}M${COL.tech} 0V${H}" stroke="${t.line}"/>
-  <text x="${COL.no}" y="36" class="mono" font-size="18" fill="${t.soft}">${String(i + 1).padStart(2, '0')}</text>
-  <rect x="${COL.shot}" y="18" width="210" height="114" fill="${t.card}" stroke="${t.line}"/>
-  <image x="${COL.shot + 4}" y="22" width="202" height="106" preserveAspectRatio="xMidYMin slice" href="${shot}"/>
-  <text x="${COL.name}" y="40" class="mono" font-size="${nameSize}" font-weight="700" fill="${t.ink}" text-decoration="underline">${esc(p.name)}</text>
-  ${pitch.map((l, k) => `<text x="${COL.name}" y="${72 + k * 25}" class="sans" font-size="19" fill="${t.soft}">${esc(l)}</text>`).join('')}
-  <text x="${COL.name}" y="${pitch.length > 1 ? 131 : 106}" class="sans" font-size="16" font-weight="700" fill="${t.ink}">${live} ↗</text>
-  <text x="${COL.type + 14}" y="38" class="sans" font-size="18" fill="${t.ink}">${esc(p.kind)}</text>
-  ${sub.map((b, k) => `<text x="${COL.type + 14}" y="${64 + k * 23}" class="sans" font-size="16" fill="${t.soft}">${esc(b)}</text>`).join('')}
-  ${tech.map((l, k) => `<text x="${COL.tech + 14}" y="${37 + k * 23}" class="mono" font-size="17" font-weight="700" fill="${t.ink}">${esc(l)}</text>`).join('')}`)
+  const kind = [p.kind, ...badges.map((b) => (b.charAt(0) + b.slice(1).toLowerCase()).replace(/(^| )ai(?=-|$)/i, '$1AI'))].join('  /  ')
+  const nameSize = width(p.name, 26, true) > W - 210 ? 21 : 26
+  const live = p.liveUrl ? 'Live demo ↗' : 'Not public'
+  let y = SHOT.y + SHOT.h + 40
+  const kindLine = `<text x="20" y="${y}" class="sans" font-size="16" font-weight="600" fill="${t.soft}" xml:space="preserve">${esc(kind)}</text>`
+  y += 32
+  const pitchLines = pitch.map((l, k) => `<text x="20" y="${y + k * 25}" class="sans" font-size="19" fill="${t.ink}">${esc(l)}</text>`).join('')
+  y += pitch.length * 25 + 14
+  const techLines = tech.map((l, k) => `<text x="20" y="${y + k * 22}" class="mono" font-size="16" font-weight="700" fill="${t.soft}">${esc(l)}</text>`).join('')
+  return svg(W, H, `${no} · ${p.name}`, `${p.name} (${p.kind}): ${p.pitch} Built with ${p.tech.join(', ')}.${p.liveUrl ? ' Has a live demo.' : ' Not public.'}`, `  ${style(t)}
+  <rect x="1.5" y="1.5" width="${W - 3}" height="${H - 3}" fill="${t.paper}" stroke="${t.ink}" stroke-width="3"/>
+  <rect x="1" y="1" width="${W - 2}" height="46" fill="${t.ink}"/>
+  <text x="18" y="32" class="mono" font-size="18" fill="${t.onInk}" opacity=".7">${no}</text>
+  <text x="56" y="33" class="mono" font-size="${nameSize}" font-weight="700" fill="${t.onInk}">${esc(p.name)}</text>
+  <text x="${W - 18}" y="31" text-anchor="end" class="sans" font-size="16" font-weight="700" fill="${t.onInk}">${live}</text>
+  <rect x="${SHOT.x - 1}" y="${SHOT.y - 1}" width="${SHOT.w + 2}" height="${SHOT.h + 2}" fill="${t.card}" stroke="${t.line}"/>
+  <image x="${SHOT.x}" y="${SHOT.y}" width="${SHOT.w}" height="${SHOT.h}" preserveAspectRatio="xMidYMin slice" href="${shot}"/>
+  <path d="M1 ${SHOT.y + SHOT.h + 14}H${W - 1}" stroke="${t.line}"/>
+  ${kindLine}
+  ${pitchLines}
+  ${techLines}`)
+}
+
+// The closing card: everything else lives on the portfolio.
+function moreCard(t) {
+  const W = 600, H = 600
+  return svg(W, H, 'See every project on the portfolio', 'Full write-ups, more screenshots and a contact form on fredanthonygallano.vercel.app.', `  ${style(t)}
+  <rect x="1.5" y="1.5" width="${W - 3}" height="${H - 3}" fill="${t.field}" stroke="${t.ink}" stroke-width="3" stroke-dasharray="10 7"/>
+  ${logo(W / 2 - 117, 196, 74, t.ink, t.accent, false)}
+  <text x="${W / 2}" y="336" text-anchor="middle" class="sans" font-size="28" font-weight="800" fill="${t.ink}">Every project, in full</text>
+  <text x="${W / 2}" y="372" text-anchor="middle" class="sans" font-size="19" fill="${t.soft}">Write-ups, more screenshots and a contact form</text>
+  <text x="${W / 2}" y="424" text-anchor="middle" class="mono" font-size="20" font-weight="700" fill="${t.ink}" text-decoration="underline">fredanthonygallano.vercel.app</text>`)
 }
 
 function stackAndCerts(t) {
@@ -226,7 +235,7 @@ const photo = await shrink(path.join(site, 'public/profile/fred.webp'), 320, 400
 const shots = {}
 for (const p of projects) {
   const s = (p.gallery?.[0] ?? p.image).src
-  shots[p.id] = await shrink(path.join(site, 'public', s), 404, 212)
+  shots[p.id] = await shrink(path.join(site, 'public', s), 1136, 672, 0.7)
 }
 await browser.close()
 
@@ -235,15 +244,20 @@ rmSync(out, { recursive: true, force: true })
 mkdirSync(path.join(out, 'projects'), { recursive: true })
 for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(path.join(out, `header-${name}.svg`), header(t, photo))
-  writeFileSync(path.join(out, `projects-head-${name}.svg`), tableHead(t))
-  projects.forEach((p, i) => writeFileSync(path.join(out, 'projects', `${String(i + 1).padStart(2, '0')}-${p.id}-${name}.svg`), row(t, p, i, shots[p.id], i === projects.length - 1)))
+  writeFileSync(path.join(out, `projects-head-${name}.svg`), galleryHead(t))
+  projects.forEach((p, i) => writeFileSync(path.join(out, 'projects', `${String(i + 1).padStart(2, '0')}-${p.id}-${name}.svg`), card(t, p, i, shots[p.id])))
+  writeFileSync(path.join(out, 'projects', `more-${name}.svg`), moreCard(t))
   writeFileSync(path.join(out, `stack-${name}.svg`), stackAndCerts(t))
 }
 
 // The README itself.
 const pic = (base, alt, extra = '') => `<picture><source media="(prefers-color-scheme: dark)" srcset="assets/${base}-dark.svg"><img alt="${esc(alt)}" src="assets/${base}-light.svg" width="100%"${extra}></picture>`
 const shield = (label, value, href) => `<a href="${href}"><img alt="${esc(`${label}: ${value}`)}" src="https://img.shields.io/badge/${encodeURIComponent(label.replace(/ /g, '_'))}-${encodeURIComponent(value.replace(/-/g, '--').replace(/ /g, '_'))}-d3ead9?style=flat-square&labelColor=0e3a2d"></a>`
-const rows = projects.map((p, i) => `<a href="${SITE}/projects/${p.id}">${pic(`projects/${String(i + 1).padStart(2, '0')}-${p.id}`, `${String(i + 1).padStart(2, '0')} · ${p.name} (${p.kind}): ${p.pitch} Built with ${p.tech.join(', ')}.`, ' align="top"')}</a>`).join('\n')
+const cardPic = (base, alt) => `<picture><source media="(prefers-color-scheme: dark)" srcset="assets/${base}-dark.svg"><img alt="${esc(alt)}" src="assets/${base}-light.svg" width="49%"></picture>`
+const rows = [
+  ...projects.map((p, i) => `  <a href="${SITE}/projects/${p.id}">${cardPic(`projects/${String(i + 1).padStart(2, '0')}-${p.id}`, `${String(i + 1).padStart(2, '0')} · ${p.name} (${p.kind}): ${p.pitch} Built with ${p.tech.join(', ')}.`)}</a>`),
+  `  <a href="${SITE}/projects">${cardPic('projects/more', 'See every project in full on fredanthonygallano.vercel.app')}</a>`,
+].join(String.fromCharCode(10))
 const readme = `<a href="${SITE}">${pic('header', `${profile.name} — portfolio registration form. ${profile.role}, ${profile.status}, City College of Calapan. Available for work: ${profile.availability.detail}.`)}</a>
 
 <p align="center">
@@ -254,8 +268,11 @@ const readme = `<a href="${SITE}">${pic('header', `${profile.name} — portfolio
 
 ${profile.lede}
 
-<a href="${SITE}/projects">${pic('projects-head', `Projects (${projects.length})`, ' align="top"')}</a>
+<a href="${SITE}/projects">${pic('projects-head', `Projects (${projects.length})`)}</a>
+
+<p align="center">
 ${rows}
+</p>
 
 <a href="${SITE}/#stack">${pic('stack', 'Tech stack and certifications')}</a>
 
