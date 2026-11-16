@@ -1,158 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
-  <title id="title">$ whoami — Fred Anthony Gallano</title>
-  <desc id="desc">Aspiring Full-Stack Developer, web and mobile. BS Information Systems student at City College of Calapan, open to internship or OJT.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+  <title id="title">Fred Anthony Gallano — portfolio registration form</title>
+  <desc id="desc">Fred Anthony Gallano. Role: Full-Stack Developer. Course: BS Information Systems, 4th year. School: City College of Calapan. Address: Calapan City, Oriental Mindoro, Philippines. Status: available for work — OJT / Freelance / Remote.</desc>
   <style>
-    .mono { font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, 'Liberation Mono', Menlo, monospace; }
-    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
-    .ch { animation: show 0.01s steps(1) backwards; }
-    .in { animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
-    .pop { animation: pop 0.45s cubic-bezier(0.22, 1, 0.36, 1) backwards; transform-box: fill-box; transform-origin: center; }
-    .cursor { animation: blink 1.1s steps(1) infinite; }
-    .pulse { animation: pulse 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    .beat { animation: beat 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Noto Sans', Helvetica, Arial, sans-serif; }
+    .mono { font-family: 'Courier New', Courier, 'Liberation Mono', monospace; }
+    .in { animation: rise .6s cubic-bezier(.16,1,.3,1) backwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+    
+    .ch { animation: show .01s steps(1) backwards; }
     @keyframes show { from { fill-opacity: 0; } }
-    @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
-    @keyframes pop { from { opacity: 0; transform: scale(0.2); } }
+    .caret { animation: blink 1.1s steps(1) infinite; }
+    .blink { animation: blink 1.1s steps(1) infinite 2.4s; }
     @keyframes blink { 50% { opacity: 0; } }
-    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.3); } }
-    @keyframes beat { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(0.7); } }
-    .boot { opacity: 0; animation: keep 2.6s steps(1); }
-    .main { animation: show-g 0.01s steps(1) backwards; animation-delay: 2.6s; }
-    .bar { animation: fill 1.1s cubic-bezier(0.22, 1, 0.36, 1) backwards; animation-delay: 1.3s; transform-box: fill-box; transform-origin: left; }
-    .blade { animation: blade 1.15s cubic-bezier(0.77, 0, 0.18, 1) both; }
-    .role { animation: role 10.4s linear infinite backwards; }
-    @keyframes keep { from, to { opacity: 1; } }
-    @keyframes show-g { from { opacity: 0; } }
-    @keyframes fill { from { transform: scaleX(0); } }
-    @keyframes blade {
-      0% { transform: translateX(-1800px); }
-      42%, 58% { transform: translateX(-250px); }
-      100% { transform: translateX(1400px); }
-    }
-    @keyframes role { 0% { opacity: 0; } 3%, 22% { opacity: 1; } 25%, 100% { opacity: 0; } }
-    @media (prefers-reduced-motion: reduce) { .boot, .blade { display: none; } }
+    .draw { animation: draw .9s cubic-bezier(.65,0,.35,1) .1s both; }
+    .draw2 { animation: draw .35s cubic-bezier(.3,0,.2,1) .85s both; }
+    @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    .stamp { animation: stamp .5s cubic-bezier(.3,1.6,.5,1) 2.20s backwards; transform-box: fill-box; transform-origin: center; }
+    @keyframes stamp { from { opacity: 0; transform: scale(1.8); } }
     @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
-  
-  <defs>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#000000" stroke-opacity="0.05"/>
-    </pattern>
-    <radialGradient id="glow" cx="80%" cy="35%" r="60%">
-      <stop offset="0" stop-color="#ffb000" stop-opacity="0.2"/>
-      <stop offset="1" stop-color="#ffb000" stop-opacity="0"/>
-    </radialGradient>
-    <clipPath id="frame"><rect x="1" y="1" width="1198" height="398" rx="14"/></clipPath>
-  </defs>
-  <g clip-path="url(#frame)">
-    <rect width="1200" height="400" fill="#fbfaf7"/>
-    <rect width="1200" height="400" fill="url(#grid)"/>
-    <rect width="1200" height="400" fill="url(#glow)"/>
-    <rect width="1200" height="44" fill="#f3f1ec"/>
-    <path d="M0 44.5H1200" stroke="#e3ddd0"/>
-  </g>
-  <rect x="0.5" y="0.5" width="1199" height="399" rx="14" fill="none" stroke="#e3ddd0"/>
-  <circle cx="30" cy="22" r="6" fill="#e3ddd0"/>
-  <circle cx="50" cy="22" r="6" fill="#e3ddd0"/>
-  <circle cx="70" cy="22" r="6" fill="#ffb000"/>
-  <text x="600" y="27" text-anchor="middle" class="mono" font-size="14" fill="#6b6b6b">~/heyitsmefarid</text>
-
-  <g class="boot">
-    <text x="64" y="100" class="mono in" style="animation-delay:0.25s" font-size="22" fill="#6b6b6b"><tspan fill="#9a5a00">[ ok ]</tspan> mounting profile <tspan fill="#e3ddd0">..............</tspan> <tspan fill="#151515">ok</tspan></text>
-    <text x="64" y="140" class="mono in" style="animation-delay:0.53s" font-size="22" fill="#6b6b6b"><tspan fill="#9a5a00">[ ok ]</tspan> indexing projects <tspan fill="#e3ddd0">.............</tspan> <tspan fill="#151515">5</tspan></text>
-    <text x="64" y="180" class="mono in" style="animation-delay:0.81s" font-size="22" fill="#6b6b6b"><tspan fill="#9a5a00">[ ok ]</tspan> loading tech stack <tspan fill="#e3ddd0">............</tspan> <tspan fill="#151515">25</tspan></text>
-    <text x="64" y="220" class="mono in" style="animation-delay:1.09s" font-size="22" fill="#6b6b6b"><tspan fill="#9a5a00">[ ok ]</tspan> warming up the assistant <tspan fill="#e3ddd0">......</tspan> <tspan fill="#151515">ok</tspan></text>
-    <text x="64" y="282" class="mono in" style="animation-delay:1.3s" font-size="22" fill="#6b6b6b"><tspan fill="#9a5a00">$</tspan> boot fred</text>
-    <rect x="64" y="304" width="420" height="10" rx="5" fill="#f3efe6" class="in" style="animation-delay:1.3s"/>
-    <rect x="64" y="304" width="420" height="10" rx="5" fill="#ffb000" class="bar"/>
-  </g>
-
-  <g class="main">
-    <text x="64" y="108" class="mono" font-size="22" fill="#6b6b6b"><tspan fill="#9a5a00">$</tspan> whoami</text>
-    <text x="62" y="186" class="sans in" style="animation-delay:2.70s" font-size="64" font-weight="700" letter-spacing="-1.5" fill="#151515">Fred Anthony Gallano</text>
-    <text x="64" y="238" class="sans in" style="animation-delay:2.85s" font-size="27" fill="#3a3a3a">Aspiring Full-Stack Developer <tspan fill="#9a5a00">—</tspan> web &amp; mobile</text>
-    <text x="64" y="292" class="mono role" style="animation-delay:3.10s;opacity:1" font-size="20" fill="#9a5a00">&gt; builds for the web</text>
-    <text x="64" y="292" class="mono role" style="animation-delay:5.70s;opacity:0" font-size="20" fill="#9a5a00">&gt; builds for mobile</text>
-    <text x="64" y="292" class="mono role" style="animation-delay:8.30s;opacity:0" font-size="20" fill="#9a5a00">&gt; learns by building</text>
-    <text x="64" y="292" class="mono role" style="animation-delay:10.90s;opacity:0" font-size="20" fill="#9a5a00">&gt; open to Internship / OJT</text>
-    <text x="64" y="340" class="mono in" style="animation-delay:3.00s" font-size="16" fill="#6b6b6b">BS Information Systems · City College of Calapan · Calapan City, PH</text>
-    <rect x="1040" y="324" width="13" height="22" fill="#ffb000" class="cursor"/>
-    <g class="in" style="animation-delay:2.80s">
-      <circle cx="920" cy="112" r="8" fill="#ebe8e1"/>
-      <circle cx="944" cy="112" r="8" fill="#fde2a3"/>
-      <circle cx="968" cy="112" r="8" fill="#ebe8e1"/>
-      <circle cx="992" cy="112" r="8" fill="#f8c14f"/>
-      <circle cx="1016" cy="112" r="8" fill="#ebe8e1"/>
-      <circle cx="1040" cy="112" r="8" fill="#fde2a3"/>
-      <circle cx="1064" cy="112" r="8" fill="#ebe8e1"/>
-      <circle cx="1088" cy="112" r="8" fill="#e39400"/>
-      <circle cx="1112" cy="112" r="8" fill="#ebe8e1"/>
-      <circle cx="1136" cy="112" r="8" fill="#ebe8e1"/>
-      <circle cx="920" cy="136" r="8" fill="#fde2a3"/>
-      <circle cx="944" cy="136" r="8" fill="#ebe8e1"/>
-      <circle cx="968" cy="136" r="8" fill="#f8c14f"/>
-      <circle cx="992" cy="136" r="8" fill="#ebe8e1"/>
-      <circle cx="1016" cy="136" r="8" fill="#e39400"/>
-      <circle cx="1040" cy="136" r="8" fill="#ebe8e1"/>
-      <circle cx="1064" cy="136" r="8" fill="#fde2a3"/>
-      <circle cx="1088" cy="136" r="8" fill="#ebe8e1"/>
-      <circle cx="1112" cy="136" r="8" fill="#9a5a00" class="pulse" style="animation-delay:4.05s"/>
-      <circle cx="1136" cy="136" r="8" fill="#ebe8e1"/>
-      <circle cx="920" cy="160" r="8" fill="#ebe8e1"/>
-      <circle cx="944" cy="160" r="8" fill="#e39400"/>
-      <circle cx="968" cy="160" r="8" fill="#ebe8e1"/>
-      <circle cx="992" cy="160" r="8" fill="#fde2a3"/>
-      <circle cx="1016" cy="160" r="8" fill="#ebe8e1"/>
-      <circle cx="1040" cy="160" r="8" fill="#f8c14f"/>
-      <circle cx="1064" cy="160" r="8" fill="#9a5a00" class="pulse" style="animation-delay:3.35s"/>
-      <circle cx="1088" cy="160" r="8" fill="#ebe8e1"/>
-      <circle cx="1112" cy="160" r="8" fill="#fde2a3"/>
-      <circle cx="1136" cy="160" r="8" fill="#ebe8e1"/>
-      <circle cx="920" cy="184" r="8" fill="#f8c14f"/>
-      <circle cx="944" cy="184" r="8" fill="#ebe8e1"/>
-      <circle cx="968" cy="184" r="8" fill="#fde2a3"/>
-      <circle cx="992" cy="184" r="8" fill="#ebe8e1"/>
-      <circle cx="1016" cy="184" r="8" fill="#e39400"/>
-      <circle cx="1040" cy="184" r="8" fill="#ebe8e1"/>
-      <circle cx="1064" cy="184" r="8" fill="#f8c14f"/>
-      <circle cx="1088" cy="184" r="8" fill="#ebe8e1"/>
-      <circle cx="1112" cy="184" r="8" fill="#fde2a3"/>
-      <circle cx="1136" cy="184" r="8" fill="#e39400"/>
-      <circle cx="920" cy="208" r="8" fill="#ebe8e1"/>
-      <circle cx="944" cy="208" r="8" fill="#f8c14f"/>
-      <circle cx="968" cy="208" r="8" fill="#ebe8e1"/>
-      <circle cx="992" cy="208" r="8" fill="#9a5a00" class="pulse" style="animation-delay:4.05s"/>
-      <circle cx="1016" cy="208" r="8" fill="#ebe8e1"/>
-      <circle cx="1040" cy="208" r="8" fill="#fde2a3"/>
-      <circle cx="1064" cy="208" r="8" fill="#ebe8e1"/>
-      <circle cx="1088" cy="208" r="8" fill="#e39400"/>
-      <circle cx="1112" cy="208" r="8" fill="#f8c14f"/>
-      <circle cx="1136" cy="208" r="8" fill="#ebe8e1"/>
-      <circle cx="920" cy="232" r="8" fill="#fde2a3"/>
-      <circle cx="944" cy="232" r="8" fill="#ebe8e1"/>
-      <circle cx="968" cy="232" r="8" fill="#e39400"/>
-      <circle cx="992" cy="232" r="8" fill="#ebe8e1"/>
-      <circle cx="1016" cy="232" r="8" fill="#f8c14f"/>
-      <circle cx="1040" cy="232" r="8" fill="#ebe8e1"/>
-      <circle cx="1064" cy="232" r="8" fill="#fde2a3"/>
-      <circle cx="1088" cy="232" r="8" fill="#9a5a00" class="pulse" style="animation-delay:3.70s"/>
-      <circle cx="1112" cy="232" r="8" fill="#ebe8e1"/>
-      <circle cx="1136" cy="232" r="8" fill="#f8c14f"/>
-      <circle cx="920" cy="256" r="8" fill="#ebe8e1"/>
-      <circle cx="944" cy="256" r="8" fill="#fde2a3"/>
-      <circle cx="968" cy="256" r="8" fill="#ebe8e1"/>
-      <circle cx="992" cy="256" r="8" fill="#f8c14f"/>
-      <circle cx="1016" cy="256" r="8" fill="#ebe8e1"/>
-      <circle cx="1040" cy="256" r="8" fill="#e39400"/>
-      <circle cx="1064" cy="256" r="8" fill="#ebe8e1"/>
-      <circle cx="1088" cy="256" r="8" fill="#fde2a3"/>
-      <circle cx="1112" cy="256" r="8" fill="#ebe8e1"/>
-      <circle cx="1136" cy="256" r="8" fill="#9a5a00" class="pulse" style="animation-delay:4.40s"/>
+  <rect x="1" y="1" width="1198" height="468" fill="#d3ead9" stroke="#0e3a2d" stroke-width="3"/>
+  <rect x="1" y="1" width="1198" height="64" fill="#0e3a2d"/>
+  <g transform="translate(28 15) scale(0.2786885245901639)" fill="none" stroke="#e4f4e8" stroke-linecap="butt" stroke-linejoin="miter">
+      <path d="M114 16H16V72A34 34 0 0 0 50 106H106V76H50" stroke-width="16" pathLength="1" stroke-dasharray="1 1" class="draw"/>
+      <path d="M8 46H76" stroke-width="16" pathLength="1" stroke-dasharray="1 1" class="draw2"/>
+      <rect x="92" y="38" width="16" height="16" fill="#8fb8a8" stroke="none"/>
+      <g transform="translate(146 14)" stroke-width="12"><path d="M10 100V14H46"/><path d="M4 46H34"/><path d="M56 100V46H88"/><path d="M104 70H144V46H104V76A18 18 0 0 0 122 94H150"/><path d="M208 8V100"/><path d="M208 46H164V76A18 18 0 0 0 182 94H208"/>
+        <rect x="222" y="88" width="12" height="12" fill="#8fb8a8" stroke="none" class="blink"/></g>
     </g>
+  <text x="1172" y="41" text-anchor="end" class="mono" font-size="18" font-weight="700" fill="#e4f4e8">fredanthonygallano.vercel.app</text>
+  <g class="in" style="animation-delay:.2s">
+    <text x="28" y="110" class="sans" font-size="34" font-weight="800" fill="#0e3a2d">Portfolio registration form</text>
+    <text x="28" y="138" class="sans" font-size="17" fill="#33614f">Full-stack web and mobile developer from Calapan City, Philippines.</text>
   </g>
-
-  <g clip-path="url(#frame)">
-    <path d="M200 0H1700L1500 400H0Z" fill="#ffb000" class="blade" style="animation-delay:2.0s"/>
-    <path d="M200 0H1700L1500 400H0Z" fill="#151515" class="blade" style="animation-delay:2.1s"/>
+  <path d="M1 156H1199" stroke="#0e3a2d" stroke-width="1.5"/>
+  <!-- photo box -->
+  <path d="M238 156V469M878 156V469" stroke="#0e3a2d" stroke-width="1.5"/>
+  <g transform="rotate(-2.5 120 312)">
+    <rect x="32" y="190" width="172" height="214" fill="#fbfdf9" stroke="rgba(14,58,45,0.22)"/>
+    <image x="38" y="196" width="160" height="200" preserveAspectRatio="xMidYMid slice" href="data:image/webp;base64,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"/>
+  </g>
+  <path d="M66 220V176a10 10 0 0 1 20 0V226a6 6 0 0 1-12 0V186" fill="none" stroke="#33614f" stroke-width="3" stroke-linecap="round"/>
+  <!-- details -->
+  <rect x="238" y="156" width="640" height="104" fill="#eaf5ec"/>
+  <text x="256" y="184" class="sans" font-size="15" font-weight="600" fill="#33614f">Name</text>
+  <text x="256" y="238" class="mono" font-size="44" font-weight="700" fill="#0e3a2d"><tspan class="ch" style="animation-delay:0.50s">F</tspan><tspan class="ch" style="animation-delay:0.57s">r</tspan><tspan class="ch" style="animation-delay:0.64s">e</tspan><tspan class="ch" style="animation-delay:0.71s">d</tspan><tspan class="ch" style="animation-delay:0.78s"> </tspan><tspan class="ch" style="animation-delay:0.85s">A</tspan><tspan class="ch" style="animation-delay:0.92s">n</tspan><tspan class="ch" style="animation-delay:0.99s">t</tspan><tspan class="ch" style="animation-delay:1.06s">h</tspan><tspan class="ch" style="animation-delay:1.13s">o</tspan><tspan class="ch" style="animation-delay:1.20s">n</tspan><tspan class="ch" style="animation-delay:1.27s">y</tspan><tspan class="ch" style="animation-delay:1.34s"> </tspan><tspan class="ch" style="animation-delay:1.41s">G</tspan><tspan class="ch" style="animation-delay:1.48s">a</tspan><tspan class="ch" style="animation-delay:1.55s">l</tspan><tspan class="ch" style="animation-delay:1.62s">l</tspan><tspan class="ch" style="animation-delay:1.69s">a</tspan><tspan class="ch" style="animation-delay:1.76s">n</tspan><tspan class="ch" style="animation-delay:1.83s">o</tspan><tspan class="caret" fill="#33614f">_</tspan></text>
+  
+    <rect x="238" y="260" width="320" height="102" fill="#d3ead9" stroke="#0e3a2d" stroke-width="1.5"/>
+    <text x="254" y="286" class="sans" font-size="15" font-weight="600" fill="#33614f">Role</text>
+    <text x="254" y="318" class="mono" font-size="21" font-weight="700" fill="#0e3a2d">Full-Stack Developer</text>
+  
+    <rect x="558" y="260" width="320" height="102" fill="#d3ead9" stroke="#0e3a2d" stroke-width="1.5"/>
+    <text x="574" y="286" class="sans" font-size="15" font-weight="600" fill="#33614f">Course</text>
+    <text x="574" y="318" class="mono" font-size="19" font-weight="700" fill="#0e3a2d">BS Information Systems,</text><text x="574" y="344" class="mono" font-size="19" font-weight="700" fill="#0e3a2d">4th year</text>
+  
+    <rect x="238" y="362" width="320" height="107" fill="#d3ead9" stroke="#0e3a2d" stroke-width="1.5"/>
+    <text x="254" y="388" class="sans" font-size="15" font-weight="600" fill="#33614f">School</text>
+    <text x="254" y="420" class="mono" font-size="21" font-weight="700" fill="#0e3a2d">City College of Calapan</text>
+  
+    <rect x="558" y="362" width="320" height="107" fill="#d3ead9" stroke="#0e3a2d" stroke-width="1.5"/>
+    <text x="574" y="388" class="sans" font-size="15" font-weight="600" fill="#33614f">Address</text>
+    <text x="574" y="420" class="mono" font-size="19" font-weight="700" fill="#0e3a2d">Calapan City, Oriental</text><text x="574" y="446" class="mono" font-size="19" font-weight="700" fill="#0e3a2d">Mindoro, Philippines</text>
+  <!-- status -->
+  <rect x="878" y="156" width="320" height="34" fill="#0e3a2d"/>
+  <text x="894" y="179" class="sans" font-size="16" font-weight="700" fill="#e4f4e8">Status</text>
+  <g transform="rotate(-6 1038 316)">
+    <g class="stamp">
+      <rect x="908" y="254" width="260" height="124" rx="10" fill="none" stroke="#0e3a2d" stroke-width="3"/>
+      <rect x="915" y="261" width="246" height="110" rx="6" fill="none" stroke="#0e3a2d" stroke-width="1.5"/>
+      <text x="1038" y="292" text-anchor="middle" class="sans" font-size="15" font-weight="800" letter-spacing="2" fill="#0e3a2d">AVAILABLE FOR</text>
+      <text x="1038" y="336" text-anchor="middle" class="sans" font-size="44" font-weight="900" letter-spacing="2" fill="#0e3a2d">WORK</text>
+      <text x="1038" y="361" text-anchor="middle" class="sans" font-size="15" font-weight="800" letter-spacing="1" fill="#0e3a2d">OJT / FREELANCE / REMOTE</text>
+    </g>
   </g>
 </svg>

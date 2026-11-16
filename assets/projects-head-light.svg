@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="92" viewBox="0 0 1200 92" role="img" aria-labelledby="title desc">
+  <title id="title">Projects (9)</title>
+  <desc id="desc">Table of 9 projects. Each row links to the project's page on the portfolio.</desc>
+  <style>
+    .sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Noto Sans', Helvetica, Arial, sans-serif; }
+    .mono { font-family: 'Courier New', Courier, 'Liberation Mono', monospace; }
+    .in { animation: rise .6s cubic-bezier(.16,1,.3,1) backwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+    
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect x="1" y="1" width="1198" height="92" fill="#d3ead9"/>
+  <path d="M1.5 92V1.5H1198.5V92" fill="none" stroke="#0e3a2d" stroke-width="3"/>
+  <rect x="1" y="1" width="1198" height="50" fill="#0e3a2d"/>
+  <text x="18" y="34" class="sans" font-size="21" font-weight="800" fill="#e4f4e8">Projects (9)</text>
+  <text x="1182" y="34" text-anchor="end" class="sans" font-size="16" font-weight="600" fill="#e4f4e8">Click a row to open its page</text>
+  <text x="18" y="78" class="mono" font-size="16" font-weight="700" fill="#33614f">No.</text>
+  <text x="70" y="78" class="sans" font-size="16" font-weight="600" fill="#33614f">Project</text>
+  <text x="774" y="78" class="sans" font-size="16" font-weight="600" fill="#33614f">Type</text>
+  <text x="949" y="78" class="mono" font-size="16" font-weight="700" fill="#33614f">Built with</text>
+  <path d="M760 51V92M935 51V92" stroke="rgba(14,58,45,0.22)"/>
+  <path d="M1 91.25H1199" stroke="#0e3a2d" stroke-width="1.5"/>
+</svg>

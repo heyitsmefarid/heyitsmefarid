@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="485" viewBox="0 0 1200 485" role="img" aria-labelledby="title desc">
+  <title id="title">Tech stack and certifications</title>
+  <desc id="desc">Tech stack — Main development: Flutter, React, Node.js, NestJS, PHP, TypeScript, JavaScript, HTML, CSS, Bootstrap. Backend / database: PostgreSQL, MySQL, Firebase, Supabase, REST APIs. Programming: Python, Java, C++. Tools: Git, GitHub, VS Code, Android Studio, Visual Studio, Figma, Canva. Certifications — Computer Systems Servicing (CSS NC II); Programming (Java) NC III — Certificate of Training; Programming (Java) NC III — Enterprise Training Completion; Microsoft Cybersecurity Course: Security, Compliance, and Identity Fundamentals; n8n Quickstart.</desc>
+  <style>
+    .sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Noto Sans', Helvetica, Arial, sans-serif; }
+    .mono { font-family: 'Courier New', Courier, 'Liberation Mono', monospace; }
+    .in { animation: rise .6s cubic-bezier(.16,1,.3,1) backwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+    
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect x="1.5" y="1.5" width="1197" height="482" fill="#0c2b22" stroke="#cfeedb" stroke-width="3"/>
+  <rect x="1" y="1" width="1198" height="50" fill="#cfeedb"/>
+  <text x="20" y="34" class="sans" font-size="21" font-weight="800" fill="#0c2b22">Tech stack</text>
+  <text x="620" y="34" class="sans" font-size="21" font-weight="800" fill="#0c2b22">Certifications (5)</text>
+  <path d="M600 51V483" stroke="#cfeedb" stroke-width="1.5"/>
+  <path d="M600 1V51" stroke="#0c2b22" stroke-opacity=".35" stroke-width="1.5"/>
+  <text x="20" y="92" class="sans" font-size="15" font-weight="600" fill="#9ccab2">Main development</text><text x="20" y="120" class="mono" font-size="19" font-weight="700" fill="#cfeedb" xml:space="preserve">Flutter   React   Node.js   NestJS   PHP</text><text x="20" y="147" class="mono" font-size="19" font-weight="700" fill="#cfeedb" xml:space="preserve">TypeScript   JavaScript   HTML   CSS   Bootstrap</text>
+  <text x="20" y="196" class="sans" font-size="15" font-weight="600" fill="#9ccab2">Backend / database</text><text x="20" y="224" class="mono" font-size="19" font-weight="700" fill="#cfeedb" xml:space="preserve">PostgreSQL   MySQL   Firebase   Supabase</text><text x="20" y="251" class="mono" font-size="19" font-weight="700" fill="#cfeedb" xml:space="preserve">REST APIs</text>
+  <text x="20" y="300" class="sans" font-size="15" font-weight="600" fill="#9ccab2">Programming</text><text x="20" y="328" class="mono" font-size="19" font-weight="700" fill="#cfeedb" xml:space="preserve">Python   Java   C++</text>
+  <text x="20" y="377" class="sans" font-size="15" font-weight="600" fill="#9ccab2">Tools</text><text x="20" y="405" class="mono" font-size="19" font-weight="700" fill="#cfeedb" xml:space="preserve">Git   GitHub   VS Code   Android Studio</text><text x="20" y="432" class="mono" font-size="19" font-weight="700" fill="#cfeedb" xml:space="preserve">Visual Studio   Figma   Canva</text>
+  <text x="620" y="90" class="sans" font-size="18" font-weight="700" fill="#cfeedb">Computer Systems Servicing (CSS NC II)</text><text x="620" y="115" class="sans" font-size="15" fill="#9ccab2">TESDA, National Certificate II, Dec 2024, valid until Dec 2029</text>
+  <path d="M600 133H1198" stroke="rgba(207,238,219,0.22)"/><text x="620" y="159" class="sans" font-size="18" font-weight="700" fill="#cfeedb">Programming (Java) NC III — Certificate of Training</text><text x="620" y="184" class="sans" font-size="15" fill="#9ccab2">BCRV Tech-Voc, Inc. / TESDA, 240 hours, Dec 2024</text>
+  <path d="M600 202H1198" stroke="rgba(207,238,219,0.22)"/><text x="620" y="228" class="sans" font-size="18" font-weight="700" fill="#cfeedb">Programming (Java) NC III — Enterprise Training Completion</text><text x="620" y="253" class="sans" font-size="15" fill="#9ccab2">OLLOPA Corporation, 120 hours, Jan 2025</text>
+  <path d="M600 271H1198" stroke="rgba(207,238,219,0.22)"/><text x="620" y="297" class="sans" font-size="18" font-weight="700" fill="#cfeedb">Microsoft Cybersecurity Course: Security, Compliance, and</text><text x="620" y="320" class="sans" font-size="18" font-weight="700" fill="#cfeedb">Identity Fundamentals</text><text x="620" y="345" class="sans" font-size="15" fill="#9ccab2">TESDA Online Program, Course, Apr 2026</text>
+  <path d="M600 363H1198" stroke="rgba(207,238,219,0.22)"/><text x="620" y="389" class="sans" font-size="18" font-weight="700" fill="#cfeedb">n8n Quickstart</text><text x="620" y="414" class="sans" font-size="15" fill="#9ccab2">n8n Academy, Certificate of completion, Oct 2026</text>
+</svg>
