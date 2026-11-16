@@ -1,5 +1,5 @@
 # Redraws the contribution snake in the profile README once a day, in the
-# portfolio's amber colours, and publishes it to the `output` branch.
+# portfolio's greens, and publishes it to the `output` branch.
 name: Contribution snake
 
 on:
@@ -22,8 +22,8 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake-light.svg?color_snake=#9a5a00&color_dots=#ebe8e1,#fde2a3,#f8c14f,#e39400,#9a5a00
-            dist/snake-dark.svg?palette=github-dark&color_snake=#ffb000&color_dots=#1a1a1a,#4c380c,#7c5809,#b98106,#ffb000
+            dist/snake-light.svg?color_snake=#0e3a2d&color_dots=#dcebe0,#a9c9b5,#77a38d,#3f6f5a,#0e3a2d
+            dist/snake-dark.svg?palette=github-dark&color_snake=#cfeedb&color_dots=#123a2e,#2f5f4d,#5f8f7a,#97c3ad,#cfeedb
 
       - name: Publish to the output branch
         uses: crazy-max/ghaction-github-pages@v5
